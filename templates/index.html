@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Flood</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>Floods Prediction</h2>
+    <a href="/">Home</a>
+</div>
+
+<div class="center-wrapper">
+    <div class="form-box">
+        <form action="/data_predict" method="post">
+
+            <div class="grid">
+
+                <div class="field">
+                    <label>Temperature</label>
+                    <input type="number" step="any" name="Temp" required>
+                </div>
+
+                <div class="field">
+                    <label>Humidity</label>
+                    <input type="number" step="any" name="Humidity" required>
+                </div>
+
+                <div class="field">
+                    <label>Cloud Cover</label>
+                    <input type="number" step="any" name="Cloud Cover" required>
+                </div>
+
+                <div class="field">
+                    <label>Annual Rain Fall</label>
+                    <input type="number" step="any" name="ANNUAL" required>
+                </div>
+
+                <div class="field">
+                    <label>Jan-Feb Rainfall</label>
+                    <input type="number" step="any" name="Jan-Feb" required>
+                </div>
+
+                <div class="field">
+                    <label>March-May Rainfall</label>
+                    <input type="number" step="any" name="Mar-May" required>
+                </div>
+
+                <div class="field">
+                    <label>June-September Rainfall</label>
+                    <input type="number" step="any" name="Jun-Sep" required>
+                </div>
+
+                <div class="field">
+                    <label>Oct-Dec Rainfall</label>
+                    <input type="number" step="any" name="Oct-Dec" required>
+                </div>
+
+                <div class="field">
+                    <label>Average June Rainfall</label>
+                    <input type="number" step="any" name="avgjune" required>
+                </div>
+
+                <div class="field">
+                    <label>Sub Rainfall</label>
+                    <input type="number" step="any" name="sub" required>
+                </div>
+
+            </div>
+
+            <div class="btn-center">
+                <button type="submit">Predict</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

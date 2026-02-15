@@ -1,0 +1,183 @@
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d8d2c9;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background-color: black;
+    color: #00ff00;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar h2 {
+    color: #00ff00;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    color: #00ff00;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("https://assets.skyfilabs.com/images/blog/river-level-monitoring-for-flash-flood-warnings.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding-top: 180px;
+    padding-left: 120px;
+}
+
+/* ================= HERO TEXT ================= */
+.hero-text {
+    color: white;
+    max-width: 750px;
+}
+
+.hero-text h1 {
+    color: #00ff00;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* ================= CENTER WRAPPER (PREDICT PAGE) ================= */
+.center-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;  /* space for fixed navbar */
+}
+
+/* ================= FORM BOX ================= */
+.form-box {
+    background-color: #cfc9bf;
+    padding: 50px 80px;
+    border-radius: 8px;
+}
+
+/* ================= GRID LAYOUT ================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 320px);
+    gap: 30px 80px;
+}
+
+/* ================= FIELD ================= */
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.field input {
+    padding: 12px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* ================= BUTTON ================= */
+.btn-center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+button {
+    padding: 12px 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #222;
+}
+
+/* ================= RESULT PAGE ================= */
+.result {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.severe {
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.safe {
+    color: green;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+
+    .hero {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 160px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-box {
+        padding: 40px;
+    }
+}
